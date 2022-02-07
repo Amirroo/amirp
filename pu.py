@@ -180,31 +180,46 @@ def clone():
     try:
         r = requests.get("https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000&country=all&simplified=true")
         f.write(r.content)
-        f.close()
     except:
         pass
     try:
         r = requests.get("https://www.proxyscan.io/download?type=socks5")
         f.write(r.content)
-        f.close()
     except:
         pass
     try:
         r = requests.get("https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt")
         f.write(r.content)
-        f.close()
     except:
         pass
     try:
         r = requests.get("https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt")
         f.write(r.content)
-        f.close()
     except:
         pass
     try:
+	r = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt")
+	f.write(r.content)
+    except:
+	pass
+    try:
+	r = requests.get("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt")
+	f.write(r.content)
+    except:
+	pass
+    try:
+	r = requests.get("https://raw.githubusercontent.com/roma8ok/proxy-list/main/proxy-list-socks5.txt")
+	f.write(r.content)
+    except:
+	pass
+    try:
+	r = requests.get("https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt")
+	f.write(r.content)
+    except:
+	pass
+    try:
         r = requests.get("https://www.proxy-list.download/api/v1/get?type=socks5")
         f.write(r.content)
-        f.close()
     except:
         f.close()
     print("Socks Downloaded Sucessful !")
